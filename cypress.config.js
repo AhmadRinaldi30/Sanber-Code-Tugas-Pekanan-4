@@ -10,6 +10,6 @@ module.exports = defineConfig({
     supportFile : "cypress/support/commands.js",
   },
   env:{
-    baseUrl : 'https://opensource-demo.orangehrmlive.com/',
+    baseUrl : 'https://www.saucedemo.com/',
   },
 });

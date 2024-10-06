@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import * as object from "../e2e/object/page";
+
+Cypress.Commands.add("login", (username, password) =>{
+    cy.visit(Cypress.env('baseUrl'));
+    cy.get(object.input_username).type(username);
+    cy.get(object.input_password).type(password);
+    cy.get(object.btn_submit).click();
+    cy.get(object.heading).should("be.visible")
+})

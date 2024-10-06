@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^13.15.0"
+    "cypress": "^13.15.0",
+    "cypress-xpath": "^2.0.1"
   },
   "name": "sanber-code-tugas-pekanan-4",
   "version": "1.0.0",
