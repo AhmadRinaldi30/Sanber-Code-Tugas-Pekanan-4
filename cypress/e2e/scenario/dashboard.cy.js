@@ -1,6 +1,6 @@
 import * as object from "../object/page.js";
     before(() => {
-    cy.config("defaultCommandTimeout",50000);
+    cy.config("defaultCommandTimeout",20000);
     })
     
     describe('sauce demo - detail product "Sauce Labs Backpack"', () => {

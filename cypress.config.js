@@ -8,8 +8,12 @@ module.exports = defineConfig({
    }, 
     pecPattern : "cypress/e2e/scenarios",
     supportFile : "cypress/support/commands.js",
-  },
-  env:{
     baseUrl : 'https://www.saucedemo.com/',
   },
+
+   
+
+  
+  
+  
 });
