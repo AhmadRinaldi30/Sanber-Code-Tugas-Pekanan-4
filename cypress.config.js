@@ -10,10 +10,4 @@ module.exports = defineConfig({
     supportFile : "cypress/support/commands.js",
     baseUrl : 'https://www.saucedemo.com/',
   },
-
-   
-
-  
-  
-  
 });

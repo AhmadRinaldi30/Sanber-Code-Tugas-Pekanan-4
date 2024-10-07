@@ -16,7 +16,7 @@ describe('When logging on', () => {
     const pageHeader = new PageHeader()
 
     describe('Login dengan valid user account', () => {
-        it('dengan user credensial', () => {
+        it('dengan user credential', () => {
             login.withCredentials("standard_user","secret_sauce")
             pageHeader.title().should('have.text', 'Products')
         })
@@ -27,7 +27,7 @@ describe('When logging on', () => {
         })
 
         it('dengan password yang salah', () => {
-            login.withCredentials("standard_user","WRONG_USER")
+            login.withCredentials("standard_user","WRONG_PASSWORD")
             loginForm.errorMessage().should('contain', 'Username and password do not match any user')
         })
     });

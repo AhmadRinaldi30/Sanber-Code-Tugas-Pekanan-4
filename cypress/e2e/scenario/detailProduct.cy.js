@@ -6,7 +6,6 @@ before(() => {
 cy.config("defaultCommandTimeout",20000);
 })
 
-
 describe('ketika mencari product katalog', () => {
 
     const login = new LoginAction()
@@ -14,6 +13,7 @@ describe('ketika mencari product katalog', () => {
 
     beforeEach(() => {
         login.withCredentials("standard_user", "secret_sauce")
+        cy.config("defaultCommandTimeout",20000);
     });
 
     describe('semua 6 product katalog telah di tampilkan', () => {
@@ -30,7 +30,6 @@ describe('ketika mencari product katalog', () => {
         it('menambahkan item product kedalam keranjang dan mengubah jumlah item d keranjang', () => {
             
             productCatalog.addItemToCartCalled('Sauce Labs Backpack')
-
             productCatalog.shoppingCartBadge().should('contain.text','1')
             productCatalog.addToCartButtons().should('have.length',5)
             productCatalog.removeFromCartButtons().should('have.length',1)
@@ -56,12 +55,10 @@ describe('ketika mencari product katalog', () => {
 
     describe('sauce demo - detail product "Sauce Labs Backpack"', () => {
         it("Berhasil klik detail product",() =>{
-         cy.get(object.product_Backpack).click();
-         cy.get(object.btn_backProduct).should("be.visible");
-         cy.get(object.name_product_detail).should("have.text","Sauce Labs Backpack")
+            productCatalog.showDetailProductKlik().should('have.length',4)
+            productCatalog.showDetailProduct().should('contain.text','Sauce Labs Backpack')
         });
    })
-
 });
 
 

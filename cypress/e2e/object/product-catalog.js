@@ -14,4 +14,12 @@ export class ProductCatalog {
     removeFromCartButtons() { return cy.get('[data-test^=remove]') }
 
     shoppingCartBadge() { return cy.get('.shopping_cart_badge') }
+
+
+    showDetailProductKlik(){
+        return cy.get('[data-test^=item-4-title-link]').click()
+    }
+    showDetailProduct(){
+        return cy.get('.inventory_details_name.large_size')
+    }
 }
